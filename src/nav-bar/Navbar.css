@@ -1,0 +1,102 @@
+/* Style pour la barre de navigation principale (P-NAV) */
+.P-NAV {
+  background-color: #333;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fixer la barre en haut de la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Assurer que la barre est au-dessus d'autres éléments */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
+}
+
+/* Pour les deux barres fixées l'une à côté de l'autre */
+.P-NAV, .D-NAV {
+  display: flex; /* Alignement horizontal des éléments */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  align-items: center; /* Centrer les éléments verticalement */
+}
+
+/* Style pour les liens dans la barre P-NAV */
+.P-NAV ul {
+  list-style-type: none;
+  padding-right: 30px;
+  margin: 0;
+  display: flex;
+}
+
+.P-NAV .left-items {
+  justify-content: flex-start;
+}
+
+.P-NAV .right-items {
+  justify-content: flex-end;
+}
+
+.P-NAV li {
+  margin: 0 15px;
+}
+
+.P-NAV a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.P-NAV a:hover {
+  color: #ff6347;
+}
+
+.P-NAV input[type="search"] {
+  width: 250px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.P-NAV input[type="search"]:focus {
+  outline: none;
+  border-color: #ff6347;
+}
+
+/* Style pour la barre de navigation secondaire (D-NAV) */
+.D-NAV {
+  background-color: #444;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed; /* Fixer la barre en haut de la page avec P-NAV */
+  top: 50px; /* Décaler la D-NAV sous P-NAV */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.D-NAV a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.D-NAV a:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+body {
+  padding-top: 70px; /* Ajouter de l'espace en haut pour la navbar fixe */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,44 @@
+/* Conteneur du slider */
+.slider-container {
+  margin-left: 150px;
+  margin-top:100px ;
+  width: 1000px; /* Occupe toute la largeur disponible */
+  height: 500px; /* Ajuste la hauteur selon ton besoin */
+  overflow: hidden; /* Masque les images qui sortent de la zone visible */
+  position: relative;
+}
+
+/* Conteneur des images à animer */
+.slider-images {
+  display: flex; /* Utilise flexbox pour aligner les images horizontalement */
+  animation: slide 12s  infinite; /* Animation qui fait défiler les images */
+}
+
+/* Style des images */
+.slider-image {
+  width: 100%; /* Chaque image prend la largeur complète du conteneur */
+  height: 100%; /* Assure-toi que l'image couvre toute la hauteur du conteneur */
+  object-fit: cover; /* Couvre l'espace sans déformer l'image */
+}
+
+/* Animation pour faire défiler les images */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%); /* Déplace de 100% vers la gauche */
+  }
+  50% {
+    transform: translateX(-200%); /* Déplace de 200% vers la gauche */
+  }
+  75% {
+    transform: translateX(-300%); /* Déplace de 300% vers la gauche */
+  }
+  100% {
+    transform: translateX(-400%); /* Déplace de 400% vers la gauche */
+  }
+}
+h1{
+  text-align: center;
+}
